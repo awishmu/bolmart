@@ -14,6 +14,7 @@ export function ElDialog(){
 	
 	return (
 		<>
+			{/*
 		<Dialog>
 			<DialogTrigger asChild>
 				<div className="flex lg:hidden">
@@ -29,7 +30,8 @@ export function ElDialog(){
 				<DialogHeader><DialogTitle>Title</DialogTitle></DialogHeader>
 				<DialogFooter>Close</DialogFooter>
 			</DialogContent>
-		</Dialog>		
+		</Dialog>
+		*/}
 	</>
 	)
 }
