@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { NavItem } from "types";
+// import { NavItem } from "types";
 import { docsConfig } from "@/config/docs";
 import { cn } from "@/lib/utils";
 
@@ -35,7 +35,7 @@ export function DocsSidebarNav({ setOpen }: DocsSidebarNavProps) {
     </div>
   ) : null;
 }
-
+/*
 interface DocsSidebarNavItemsProps {
   items: NavItem[];
   pathname: string | null;
@@ -80,4 +80,8 @@ export function DocsSidebarNavItems({
       )}
     </div>
   ) : null;
+  
 }
+*/
+
+
