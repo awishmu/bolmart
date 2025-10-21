@@ -82,7 +82,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
 					{documentation ? (
 						<div className="hidden flex-1 items-center space-x-4 sm:justify-end lg:flex">
 							<div className="hidden lg:flex lg:grow-0">
-								<DocsSearch />
+								{/* <DocsSearch /> */}
 							</div>
 							<div className="flex lg:hidden">
 								<Icons.search className="size-6 text-muted-foreground" />
@@ -108,19 +108,21 @@ export function NavBar({ scroll = false }: NavBarProps) {
 								className="gap-2 px-5"
 								variant="default"
 								size="sm"
-								rounded="full"
+							
 							>
+								{/* 	rounded="full" */}
 								<span>Dashboard</span>
 							</Button>
 						</Link>
 					) : status === "unauthenticated" ? (
 						<Button
-							className="hidden gap-2 px-5 md:flex"
+							className="hidden gap-2 px-5 md:flex rounded-full"
 							variant="default"
 							size="sm"
-							rounded="full"
-							onClick={() => setShowSignInModal(true)}
+							
+							
 						>
+							{/* onClick={() => setShowSignInModal(true)} */}
 							<span>Sign In</span>
 							<Icons.arrowRight className="size-4" />
 						</Button>
