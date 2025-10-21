@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
    
 export function ElPopover () {
-	
+	return null;
+	/*
 	return (
 	<Popover>
 		<div id="el-popover-goup" className="hidden lg:flex lg:gap-x-12">
@@ -119,5 +120,5 @@ export function ElPopover () {
 		</div>
 	</Popover>
 	)
-	
+	*/
 }
