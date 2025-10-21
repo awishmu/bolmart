@@ -1,34 +1,44 @@
+"use client"
+import React, { useState } from 'react';
+import Link from 'next/link';
+
 import { ElPopover } from "@/components/shared/el-popover";
 import { ElDialog } from "@/components/shared/el-dialog";
 
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Phone, Heart, Scale, ShoppingCart, Search, ChevronDown, Menu } from 'lucide-react';
+
+import { TopBar } from './element/top-bar';
+import { MainHeader } from './element/main-header';
+import { NavigationBar } from './element/navigation-bar';
+
 export function HeaderSection () {
-	
+ 	
+
 	return (
 	<>
-	{ /*<!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-		<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-	*/}
-		<header className="bg-beige text-zinc-800 dark:bg-gray-900">
-		  <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-			<div className="flex lg:flex-1">
-			  <a href="#" className="-m-1.5 p-1.5">
-				<span className="sr-only">Your Company</span>
-				<img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" className="h-8 w-auto" />
-			  </a>
+		<header className="sticky top-0 z-50 shadow-sm">
+			{/* Top Bar */}
+			<div className="border-b">
+				<div className="container mx-auto px-4 py-2">
+					<TopBar />
+				</div>
 			</div>
-			{/* el-popover-group */}
-			<ElPopover />
-			<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-			  <a href="#" className="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+			{/* Main Header */}
+			<div className="container mx-auto px-4 py-4">
+				<div className="flex items-center justify-between gap-8">
+				
+					<MainHeader />
+				</div>
+ 			</div>
+			{/* Navigation */}
+			<div className="bg-beige border-t hidden lg:flex">
+				<div className="container mx-auto px-4">
+					<NavigationBar />
+				</div>
 			</div>
-			{/* el-dialog */}
-			<ElDialog />
-		  </nav>
-		  
-			  
-
 		</header>
-
 	</>
 	)
 	

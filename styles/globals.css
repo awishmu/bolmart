@@ -10,14 +10,26 @@
 	--color-bone: oklch(0.8582 0.0246 99.15);
 	--color-white-smoke: oklch(0.9669 0.0013 106.42);
 	--color-beige: oklch(0.9629 0.0362 107.06);
-	
+
 	--color-platinum: #E8E6E4ff;
 	--color-night: #131010ff;
 	--color-kelly-green: #70AF26ff;
 	--color-jet: #3B3948ff;
 	--color-battleship-gray: #9D9D99ff;
-  
+
+  --animate-marquee: marquee 20s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(-10%);
+    }
+  }
+
 }
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -148,8 +160,6 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -179,6 +189,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
 }
 
 .dark {

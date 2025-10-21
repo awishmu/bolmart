@@ -9,11 +9,11 @@ import {  docsConfig } from "@/config/docs";
 import { marketingConfig } from "@/config/marketing";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { useScroll } from "@/hooks/use-scroll";
+// import { useScroll } from "@/hooks/use-scroll";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { DocsSearch } from "@/components/docs/search";
-import { ModalContext } from "@/components/modals/providers";
+// import { DocsSearch } from "@/components/docs/search";
+// import { ModalContext } from "@/components/modals/providers";
 import { Icons } from "@/components/shared/icons";
 import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
 
@@ -23,15 +23,15 @@ interface NavBarProps {
 }
 
 export function NavBar({ scroll = false }: NavBarProps) {
-    const scrolled = useScroll(50);
-	
+ //   const scrolled = useScroll(50);
+		const scrolled = false;
 	//const session = {user : { role: "ADMIN", }, } ;	
 	const session = null;
 	const user = null;
 	const role = null;
 	
 	const status = "unauthenticated";
-	const { setShowSignInModal} = useContext(ModalContext);
+//	const { setShowSignInModal} = useContext(ModalContext);
 	
 	const selectedLayout = useSelectedLayoutSegment();
 	const documentation = selectedLayout === "docs";
