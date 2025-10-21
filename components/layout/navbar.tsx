@@ -108,8 +108,9 @@ export function NavBar({ scroll = false }: NavBarProps) {
 								className="gap-2 px-5"
 								variant="default"
 								size="sm"
-								rounded="full"
+							
 							>
+								{/* 	rounded="full" */}
 								<span>Dashboard</span>
 							</Button>
 						</Link>
