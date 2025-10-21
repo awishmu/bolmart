@@ -84,25 +84,25 @@ export function MainHeader () {
 
 				{/* Icons */}
 					<div className="flex items-center gap-4">
-						<button className="relative hover:text-green-500 transition">
+						<Button className="relative hover:text-green-500 transition">
 							<Heart className="w-6 h-6 text-gray-700" />
 								{wishlistCount > 0 && (
 							<span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
 								{wishlistCount}
 							</span>
 							)}
-						</button>
-						<button className="hidden md:flex relative hover:text-green-500 transition">
+						</Button>
+						<Button className="hidden md:flex relative hover:text-green-500 transition">
 							<Scale className="w-6 h-6 text-gray-700" />
-						</button>
-						<button className="relative hover:text-green-500 transition">
+						</Button>
+						<Button className="relative hover:text-green-500 transition">
 							<ShoppingCart className="w-6 h-6 text-gray-700" />
 							{cartCount > 0 && (
 							<span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
 								{cartCount}
 							</span>
 							)}
-						</button>
+						</Button>
 					</div>
 	</>
 	)
