@@ -120,8 +120,9 @@ export function NavBar({ scroll = false }: NavBarProps) {
 							variant="default"
 							size="sm"
 							
-							onClick={() => setShowSignInModal(true)}
+							
 						>
+							{/* onClick={() => setShowSignInModal(true)} */}
 							<span>Sign In</span>
 							<Icons.arrowRight className="size-4" />
 						</Button>
