@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 export interface DocsSidebarNavProps {
   setOpen?: (boolean) => void;
 }
-
+/*
 export function DocsSidebarNav({ setOpen }: DocsSidebarNavProps) {
   const pathname = usePathname();
   const items = docsConfig.sidebarNav;
@@ -35,7 +35,7 @@ export function DocsSidebarNav({ setOpen }: DocsSidebarNavProps) {
     </div>
   ) : null;
 }
-/*
+
 interface DocsSidebarNavItemsProps {
   items: NavItem[];
   pathname: string | null;
