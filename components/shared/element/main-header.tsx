@@ -2,9 +2,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-import { ElPopover } from "@/components/shared/el-popover";
-import { ElDialog } from "@/components/shared/el-dialog";
-
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Phone, Heart, Scale, ShoppingCart, Search, ChevronDown, Menu } from 'lucide-react';
