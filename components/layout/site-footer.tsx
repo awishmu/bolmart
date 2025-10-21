@@ -1,7 +1,7 @@
 import * as React from "react"
 import Link from "next/link"
 
-import { footerLinks, siteConfig } from "@/config/site";
+// import { footerLinks, siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 // import { ModeToggle } from "@/components/layout/mode-toggle";
 
