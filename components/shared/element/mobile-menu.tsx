@@ -1,4 +1,5 @@
 import { Search, X} from "lucide-react";
+import Link from "next/link";
 
 export function MobileMenu() {
     return (
@@ -26,28 +27,28 @@ export function MobileMenu() {
                                 <div className="nav-wrapper mx-2 py-2">
                                     <nav className="99 text-white flex flex-col">
                                         <ul id="menu-main-menu" className="mobile-menu px-4">
-                                            <li className="menu-item border-2 p-2 mb-2"><a href="https://d-themes.com/wordpress/wolmart/demo-29/product-category/fruits/">Fruits</a></li>
-                                            <li className="menu-item border-2 p-2 mb-2"><a href="https://d-themes.com/wordpress/wolmart/demo-29/product-category/vegetable/">Vegetable</a></li>
-                                            <li id="menu-item-933" className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-933"><a href="https://d-themes.com/wordpress/wolmart/demo-29/product-category/vegan-meat/">Vegan Meat</a>
+                                            <li className="menu-item border-2 p-2 mb-2"><Link href="#">Fruits</Link></li>
+                                            <li className="menu-item border-2 p-2 mb-2"><Link href="#">Vegetable</Link></li>
+                                            <li className="menu-item border-2 p-2 mb-2"><Link href="#">Vegan Meat</Link>
                                                 <ul id="megamenu mp-left" className="w-[457px] absolute">
-                                                    <li id="menu-item-936" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-936"></li>
+                                                    <li className="menu-item border-2 p-2 mb-2"></li>
                                                 </ul>
                                             </li>
-                                            <li className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-932"><a href="https://d-themes.com/wordpress/wolmart/demo-29/product-category/seafood/">Seafood</a></li>
-                                            <li className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-931"><a href="https://d-themes.com/wordpress/wolmart/demo-29/product-category/dairy/">Dairy</a></li>
-                                            <li id="menu-item-929" className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-929"><a href="https://d-themes.com/wordpress/wolmart/demo-29/product-category/bakery/">Bakery</a>
+                                            <li className="menu-item border-2 p-2 mb-2"><Link href="#">Seafood</Link></li>
+                                            <li className="menu-item border-2 p-2 mb-2"><Link href="#">Dairy</Link></li>
+                                            <li className="menu-item border-2 p-2 mb-2"><Link href="#">Bakery</Link>
                                                 <ul id="megamenu mp-left" className="w-[756px] absolte">
-                                                    <li id="menu-item-1193" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1193"></li>
+                                                    <li className="menu-item border-2 p-2 mb-2"></li>
                                                 </ul>
                                             </li>
-                                            <li className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-930 current-menu-item"><a href="https://d-themes.com/wordpress/wolmart/demo-29/product-category/beverages/">Beverages</a></li>
-                                            <li className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1230"><a href="https://d-themes.com/wordpress/wolmart/demo-29/product-category/beer-liquor/">Beer &amp; Liquor</a></li>
+                                            <li className="menu-item border-2 p-2 mb-2"><Link href="#">Beverages</Link></li>
+                                            <li className="menu-item border-2 p-2 mb-2"><Link href="#">Beer &amp; Liquor</Link></li>
                                         </ul>
                                     </nav>			
                                 </div>
 
 			    </div>
-				    <a className="mobile-menu-close" href="#" aria-label="Mobile Menu Close" role="button"><X /></a>
+				    <Link className="mobile-menu-close bg-green-700 rounded-full" href="#" aria-label="Mobile Menu Close" role="button"><X /></Link>
             </div>
         </div>
     )
