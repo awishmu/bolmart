@@ -33,9 +33,9 @@ export function MainHeader () {
 										<DialogTrigger>
 											<Button variant="outline"><i><Menu/></i></Button>
 										</DialogTrigger>
-										<DialogContent className="max-w-6xl bg-green-900/80 m-2 p-2 border-0 data-[state=open]:!zoom-in-0 data-[state=open]:duration-600 sm:max-w[425px]">
+										<DialogContent className="max-w-6xl bg-night/90 overflow-auto m-2 p-2 border-0 data-[state=open]:!zoom-in-0 data-[state=open]:duration-600 sm:max-w[425px]">
 									
-											<DialogDescription className="w-[50%] bg-night">
+											<DialogDescription className="w-[50%] bg-night over">
 												<MobileMenu />
 											</DialogDescription>
 											
