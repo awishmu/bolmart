@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Phone, Heart, Scale, ShoppingCart, Search, ChevronDown, Menu } from 'lucide-react';
+import { Phone, Heart, Scale, ShoppingCart, Search, ChevronDown, Menu, X } from 'lucide-react';
 
 import {
   Dialog,
@@ -13,6 +13,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogFooter,
+  DialogClose,
 } from "@/components/ui/dialog";
 
 import { MobileMenu } from './mobile-menu';
@@ -24,27 +26,27 @@ export function MainHeader () {
 
 	return (
 	<>
-		{/* Logo */}
-					<div className="flex items-center gap-2">
-						{/* Mebile Menu Toggle */}
+		{/* Mebile Menu Toggle */}
 							<div className='inline md:hidden w-auto'>
 								<div>
 									<Dialog>
 										<DialogTrigger>
-											<Button variant="outline"><Menu/></Button>
+											<Button variant="outline"><i><Menu/></i></Button>
 										</DialogTrigger>
-										<DialogContent className="bg-night/60 border-0">
-											<DialogHeader>
-											<DialogTitle>Are you absolutely sure?</DialogTitle>
-											<DialogDescription>
+										<DialogContent className="max-w-6xl bg-green-900/80 m-2 p-2 border-0 data-[state=open]:!zoom-in-0 data-[state=open]:duration-600 sm:max-w[425px]">
+									
+											<DialogDescription className="w-[50%] bg-night">
 												<MobileMenu />
 											</DialogDescription>
-											</DialogHeader>
+											
 										</DialogContent>
 									</Dialog>
 									
 								</div>
-							</div>
+							</div>	
+		{/* Logo */}
+					<div className="flex items-center gap-2">
+						
 						<div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center">
 							<span className="text-white font-bold text-lg">W</span>
 						</div>
