@@ -1,20 +1,25 @@
 "use client"
-
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { AnimatePresence, motion } from "motion/react"
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label";
-
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { Phone, Heart, Scale, ShoppingCart, Search, ChevronDown, Menu, X } from 'lucide-react';
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogFooter,
+  DialogClose,
+} from "@/components/ui/dialog";
 
 import { MobileMenu } from './mobile-menu';
 
-export function MainHeader () {
-	const [isVisible, setIsVisible] = useState(false)
-
+export function MainHeaderCopy1() { 
 	const [cartCount, setCartCount] = useState(3);
   	const [wishlistCount, setWishlistCount] = useState(0);
 	const categories = ['Fruits', 'Vegetable', 'Vegan Meat', 'Seafood', 'Dairy', 'Bakery', 'Beverages', 'Beer & Liquor'];
@@ -22,16 +27,26 @@ export function MainHeader () {
 	return (
 	<>
 		{/* Mebile Menu Toggle */}
-			<div className='inline w-auto'>
-				<div>
-					<div>
-
-   
-          <MobileMenu />
-        
-					</div>
-				</div>
-			</div>	
+							<div className='inline md:hidden w-auto'>
+								<div>
+									<Dialog>
+										<DialogTrigger>
+											<Button variant="outline"><i><Menu/></i></Button>
+										</DialogTrigger>
+										<DialogContent className="h-screen w-[90%] block bg-night/90 overflow-y-scroll overflow-x-hidden m-2 p-2 border-0 data-[state=open]:!zoom-in-0 data-[state=open]:duration-600 sm:max-w[425px]">
+											<DialogTitle></DialogTitle>
+											<DialogClose className="bg-rose-200 rounded-full absolute top-0 right-1">
+												<Button type="button" variant="default"><X /></Button>
+											</DialogClose>
+											<DialogDescription className="w-[60%] bg-night ">
+												
+												<MobileMenu />
+											</DialogDescription>
+										</DialogContent>
+									</Dialog>
+									
+								</div>
+							</div>	
 		{/* Logo */}
 					<div className="flex items-center gap-2">
 						

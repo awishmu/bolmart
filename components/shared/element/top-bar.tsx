@@ -6,7 +6,8 @@ export function TopBar () {
 
     <div className="flex justify-between items-center text-sm">
 						<div className="flex justify-between text-sm text-nowrap h-6 overflow-hidden w-[320px] border-l-2">
-							<p className="text-gray-600 w-[600px] animate-marquee overflow-visible">Welcome to Wolmart store message or remove it!</p>
+							<p className="text-gray-600 w-[600px] animate-marquee overflow-visible">Selamat Berkunjung di Marketplace-nya orang Bone! 
+								<span className="text-green-900 font-medium ml-2">PasarBone.com</span></p>
 						</div>
 						<div className="flex justify-end">
 							<div className="flex items-center gap-4">

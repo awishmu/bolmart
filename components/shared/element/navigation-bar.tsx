@@ -8,7 +8,7 @@ import { Phone, Heart, Scale, ShoppingCart, Search, ChevronDown, Menu } from 'lu
 
 export function NavigationBar () { 
   
-	const categories = ['Fruits', 'Vegetable', 'Vegan Meat', 'Seafood', 'Dairy', 'Bakery', 'Beverages', 'Beer & Liquor'];
+	const categories = ['Fruits', 'Vegetable', 'Minuman', 'Seafood', 'Recipe', 'Bakery & Snack', 'Promo', 'About us'];
 
 	return (
 	<>
