@@ -47,7 +47,7 @@ export function MobileMenu() {
 					<DialogDescription></DialogDescription>
 				</DialogHeader>
 					<Menubar className="flex flex-col border-none bg-transparent">
-					  <MenubarMenu className="bg-rose-300">
+					  <MenubarMenu>
 						<MenubarContent>
 							<MenubarItem className="bg-night text-white w-full mx-auto my-1 py-2">Food</MenubarItem>
 						</MenubarContent>
