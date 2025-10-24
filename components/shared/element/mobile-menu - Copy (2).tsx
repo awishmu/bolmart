@@ -19,7 +19,7 @@ import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-export function MobileMenu-copy2() {
+export function MobileMenuCopy2() {
     return (
         <Menubar className="flex flex-col h-screen bg-night border-0">
 			<MenubarMenu>
