@@ -1,4 +1,4 @@
-import { Search, X} from "lucide-react";
+import { Search, X, ChevronDown} from "lucide-react";
 import Link from "next/link";
 
 import {
@@ -27,10 +27,15 @@ import {
   MenubarSubTrigger,
   MenubarTrigger,
 } from "@/components/ui/menubar"
-
+import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label"
+
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover" 
 
 export function MobileMenu() {
     return (
@@ -40,7 +45,7 @@ export function MobileMenu() {
 			<DialogTrigger asChild>
 			  <Button variant="outline">Open Dialog</Button>
 			</DialogTrigger>
-			<DialogContent className="fixed bg-night/60 max-w-[425px] overflow-scroll h-full">
+			<DialogContent className="fixed bg-night/60 max-w-[425px] overflow-scroll h-full mb-12">
 		
 				<DialogHeader>
 					<DialogTitle></DialogTitle>
@@ -81,21 +86,32 @@ export function MobileMenu() {
 									<Link href="#" className="">Vegetables</Link>
 								</div>
 							</li>
-							<li id="menu-item" className="w-full bg-zinc-100 m-2 p-2 border-b-2">
+							<li id="menu-item" className="w-full bg-zinc-100 m-2 p-3 border-b-2">
 								<div id="menu_content">
 									<Link href="#" className="">Minuman</Link>
+									<Popover className="w-screen">
+									  <PopoverTrigger asChild>
+										<Button variant="outline" className="absolute ml-4"><ChevronDown /></Button>
+									  </PopoverTrigger>
+									  <PopoverContent className="relative flex flex-col min-w-[300px] left-[50%] m-2 p-2">
+										<ul className="m-0 p-0 w-full">
+											<li id="menu-item" className="w-full m-1 p-1 border-b-2">
+												<div id="menu_content">
+													<Link href="#" className="">Jamu</Link>
+												</div>
+											</li>
+											<li id="menu-item" className="w-full m-1 p-1 border-b-2">
+												<div id="menu_content" className="text-center m-0">
+													<Link href="#" className="">Racikan</Link>
+												</div>
+											</li>
+										</ul>
+									  </PopoverContent>
+									</Popover>
 								</div>
-							</li>
-							<li id="menu-item" className="w-full bg-zinc-100 m-2 p-2 border-b-2">
-								<div id="menu_content">
-									<Link href="#" className="">Jamu</Link>
-								</div>
-							</li>
-							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
-								<div id="menu_content" className="text-center m-0">
-									<Link href="#" className="">Racikan</Link>
-								</div>
-							</li>
+								
+							</li>	
+							
 							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
 								<div id="menu_content" className="text-center m-0">
 									<Link href="#" className="">Seafood</Link>
@@ -106,26 +122,36 @@ export function MobileMenu() {
 									<Link href="#" className="">Recipe</Link>
 								</div>
 							</li>
-							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+							<li id="menu-item" className="w-full bg-sky-100 m-2 p-3 border-b-2">
 								<div id="menu_content" className="text-center m-0">
 									<Link href="#" className="">Bakery & Snack</Link>
+										<Popover className="w-screen">
+										  <PopoverTrigger asChild>
+											<Button variant="outline" className="absolute ml-4"><ChevronDown /></Button>
+										  </PopoverTrigger>
+										  <PopoverContent className="relative flex flex-col min-w-[300px] left-[50%] m-2 p-2">
+												<ul>
+													<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+														<div id="menu_content" className="text-center m-0">
+															<Link href="#" className="">Panggang</Link>
+														</div>
+													</li>
+													<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+														<div id="menu_content" className="text-center m-0">
+															<Link href="#" className="">Kukus</Link>
+														</div>
+													</li>
+													<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+														<div id="menu_content" className="text-center m-0">
+															<Link href="#" className="">Gorengan</Link>
+														</div>
+													</li>
+												</ul>
+											</PopoverContent>
+										</Popover>									
 								</div>
 							</li>
-							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
-								<div id="menu_content" className="text-center m-0">
-									<Link href="#" className="">Panggang</Link>
-								</div>
-							</li>
-							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
-								<div id="menu_content" className="text-center m-0">
-									<Link href="#" className="">Kukus</Link>
-								</div>
-							</li>
-							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
-								<div id="menu_content" className="text-center m-0">
-									<Link href="#" className="">Gorengan</Link>
-								</div>
-							</li>
+									
 							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
 								<div id="menu_content" className="text-center m-0">
 									<Link href="#" className="">Promo</Link>
