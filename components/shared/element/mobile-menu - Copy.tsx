@@ -11,7 +11,7 @@ export function MobileMenuCopy() {
                                 <div className="search-wrapper hs-simple">
                                     <form action="https://d-themes.com/wordpress/wolmart/demo-29/" method="get" className="input-wrapper flex justify-center border-b-2 pb-2">
                                         <input type="hidden" name="post_type" value="product" />
-                                        <input type="search" className="form-control" name="s" placeholder="Search" autoComplete="off" />
+                                        <input type="search" className="form-control border-2 border-white" name="s" placeholder="Search" autoComplete="off" />
 
                                         <div className="live-search-list">
                                             <div id="autocomplete-suggestions" className="absolute hidden h-[300px] z-99;">

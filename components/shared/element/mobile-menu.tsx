@@ -40,103 +40,105 @@ export function MobileMenu() {
 			<DialogTrigger asChild>
 			  <Button variant="outline">Open Dialog</Button>
 			</DialogTrigger>
-			<DialogContent className="bg-night/60 sm:max-w-[425px] h-screen oveflow-auto">
+			<DialogContent className="fixed bg-night/60 sm:max-w-[425px] overflow-scroll h-max-[60vh]">
 		
 				<DialogHeader>
 					<DialogTitle></DialogTitle>
 					<DialogDescription></DialogDescription>
 				</DialogHeader>
-					<Menubar className="flex flex-col border-none bg-transparent">
-					  <MenubarMenu>
-						<MenubarContent>
-							<MenubarItem className="bg-night text-white w-full mx-auto my-1 py-2">Food</MenubarItem>
-						</MenubarContent>
-						<MenubarTrigger className="bg-night text-white w-full mx-auto my-1 py-2">File</MenubarTrigger>
-						<MenubarContent>
-						  <MenubarItem>
-							New Tab <MenubarShortcut>⌘T</MenubarShortcut>
-						  </MenubarItem>
-						  <MenubarItem>
-							New Window <MenubarShortcut>⌘N</MenubarShortcut>
-						  </MenubarItem>
-						  <MenubarItem disabled>New Incognito Window</MenubarItem>
-						  <MenubarSeparator />
-						  <MenubarSub>
-							<MenubarSubTrigger>Share</MenubarSubTrigger>
-							<MenubarSubContent>
-							  <MenubarItem>Email link</MenubarItem>
-							  <MenubarItem>Messages</MenubarItem>
-							  <MenubarItem>Notes</MenubarItem>
-							</MenubarSubContent>
-						  </MenubarSub>
-						  <MenubarSeparator />
-						  <MenubarItem>
-							Print... <MenubarShortcut>⌘P</MenubarShortcut>
-						  </MenubarItem>
-						</MenubarContent>
-					  </MenubarMenu>
-					  <MenubarMenu>
-						<MenubarTrigger className="bg-night text-white w-full mx-auto my-1 py-2">Edit</MenubarTrigger>
-						<MenubarContent>
-						  <MenubarItem>
-							Undo <MenubarShortcut>⌘Z</MenubarShortcut>
-						  </MenubarItem>
-						  <MenubarItem>
-							Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
-						  </MenubarItem>
-						  <MenubarSeparator />
-						  <MenubarSub>
-							<MenubarSubTrigger>Find</MenubarSubTrigger>
-							<MenubarSubContent>
-							  <MenubarItem>Search the web</MenubarItem>
-							  <MenubarSeparator />
-							  <MenubarItem>Find...</MenubarItem>
-							  <MenubarItem>Find Next</MenubarItem>
-							  <MenubarItem>Find Previous</MenubarItem>
-							</MenubarSubContent>
-						  </MenubarSub>
-						  <MenubarSeparator />
-						  <MenubarItem>Cut</MenubarItem>
-						  <MenubarItem>Copy</MenubarItem>
-						  <MenubarItem>Paste</MenubarItem>
-						</MenubarContent>
-					  </MenubarMenu>
-					  <MenubarMenu>
-						<MenubarTrigger className="bg-night text-white w-full mx-auto my-1 py-2">View</MenubarTrigger>
-						<MenubarContent>
-						  <MenubarCheckboxItem>Always Show Bookmarks Bar</MenubarCheckboxItem>
-						  <MenubarCheckboxItem checked>
-							Always Show Full URLs
-						  </MenubarCheckboxItem>
-						  <MenubarSeparator />
-						  <MenubarItem inset>
-							Reload <MenubarShortcut>⌘R</MenubarShortcut>
-						  </MenubarItem>
-						  <MenubarItem disabled inset>
-							Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>
-						  </MenubarItem>
-						  <MenubarSeparator />
-						  <MenubarItem inset>Toggle Fullscreen</MenubarItem>
-						  <MenubarSeparator />
-						  <MenubarItem inset>Hide Sidebar</MenubarItem>
-						</MenubarContent>
-					  </MenubarMenu>
-					  <MenubarMenu>
-						<MenubarTrigger className="bg-night text-white w-full mx-auto my-1 py-2">Profiles</MenubarTrigger>
-						<MenubarContent>
-						  <MenubarRadioGroup value="benoit">
-							<MenubarRadioItem value="andy">Andy</MenubarRadioItem>
-							<MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
-							<MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
-						  </MenubarRadioGroup>
-						  <MenubarSeparator />
-						  <MenubarItem inset>Edit...</MenubarItem>
-						  <MenubarSeparator />
-						  <MenubarItem inset>Add Profile...</MenubarItem>
-						</MenubarContent>
-					  </MenubarMenu>
-					</Menubar>
-		
+					{/* <!-- Search Form --> */}
+                                <div className="block bg-lime-100">
+                                    <form action="https://d-themes.com/wordpress/wolmart/demo-29/" method="get" className="input-wrapper flex justify-center border-b-2 pb-2">
+                                        <input type="hidden" name="post_type" value="product" />
+                                        <input type="search" className="form-control" name="s" placeholder="Search" autoComplete="off" />
+
+                                        <div className="live-search-list">
+                                            <div id="autocomplete-suggestions" className="absolute hidden h-[300px] z-99;">
+                                            </div>
+                                        </div>
+                                        
+                                        <button className="btn btn-search" type="submit" aria-label="Search">
+                                            <Search />
+                                        </button>
+                                    </form>
+                                </div>
+						{/* <!-- End Search Form --> */}
+					
+					<nav id="navigation-menu" className="lg-hiddenx flex flex-grow w-full justify-center">	
+						<ul id="menu-list" className="flex flex-col lg:gap-3 justify-center w-full m-auto">
+							<li id="menu-item" className="w-full bg-zinc-100 m-2 p-2 border-b-2">
+								<div id="menu_content">
+									<Link href="#" className="">Meat</Link>
+								</div>
+							</li>
+							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+								<div id="menu_content" className="text-center m-0">
+									<Link href="#" className="">Fruits</Link>
+								</div>
+							</li>
+							<li id="menu-item" className="w-full bg-green-100 m-2 p-2 border-b-2">
+								<div id="menu_content">
+									<Link href="#" className="">Vegetables</Link>
+								</div>
+							</li>
+							<li id="menu-item" className="w-full bg-zinc-100 m-2 p-2 border-b-2">
+								<div id="menu_content">
+									<Link href="#" className="">Minuman</Link>
+								</div>
+							</li>
+							<li id="menu-item" className="w-full bg-zinc-100 m-2 p-2 border-b-2">
+								<div id="menu_content">
+									<Link href="#" className="">Jamu</Link>
+								</div>
+							</li>
+							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+								<div id="menu_content" className="text-center m-0">
+									<Link href="#" className="">Racikan</Link>
+								</div>
+							</li>
+							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+								<div id="menu_content" className="text-center m-0">
+									<Link href="#" className="">Seafood</Link>
+								</div>
+							</li>
+							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+								<div id="menu_content" className="text-center m-0">
+									<Link href="#" className="">Recipe</Link>
+								</div>
+							</li>
+							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+								<div id="menu_content" className="text-center m-0">
+									<Link href="#" className="">Bakery & Snack</Link>
+								</div>
+							</li>
+							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+								<div id="menu_content" className="text-center m-0">
+									<Link href="#" className="">Panggang</Link>
+								</div>
+							</li>
+							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+								<div id="menu_content" className="text-center m-0">
+									<Link href="#" className="">Kukus</Link>
+								</div>
+							</li>
+							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+								<div id="menu_content" className="text-center m-0">
+									<Link href="#" className="">Gorengan</Link>
+								</div>
+							</li>
+							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+								<div id="menu_content" className="text-center m-0">
+									<Link href="#" className="">Promo</Link>
+								</div>
+							</li>
+							<li id="menu-item" className="w-full bg-sky-100 m-2 p-2 border-b-2">
+								<div id="menu_content" className="text-center m-0">
+									<Link href="#" className="">About</Link>
+								</div>
+							</li>
+						</ul>
+					</nav>
+					
 			</DialogContent>
 		</Dialog>
 
