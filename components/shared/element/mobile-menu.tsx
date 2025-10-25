@@ -40,7 +40,7 @@ export function MobileMenu() {
 			<DialogTrigger asChild>
 			  <Button variant="outline">Open Dialog</Button>
 			</DialogTrigger>
-			<DialogContent className="fixed bg-night/60 sm:max-w-[425px] overflow-scroll h-max-[60vh]">
+			<DialogContent className="fixed bg-night/60 max-w-[425px] overflow-scroll h-full">
 		
 				<DialogHeader>
 					<DialogTitle></DialogTitle>
