@@ -89,7 +89,7 @@ export function MobileMenu() {
 							<li id="menu-item" className="w-full p-3 border-b-2">
 								<div id="menu_content" className="m-auto">
 									<Link href="#" className="w-full">Minuman</Link>
-									<Popover className="w-screen">
+									<Popover>
 									  <PopoverTrigger asChild>
 										<Button variant="outline" className="absolute ml-4"><ChevronDown className="fill-night"/></Button>
 									  </PopoverTrigger>
