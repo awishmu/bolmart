@@ -9,14 +9,15 @@ import { Phone, Heart, Scale, ShoppingCart, Search, ChevronDown, Menu } from 'lu
 export function NavigationBar () { 
   
 	const categories = ['Fruits', 'Vegetable', 'Vegan Meat', 'Seafood', 'Recipe', 'Bakery', 'Promo', 'About us'];
-	
+
+	/*
 	// State to track which component is open
 	const [openComponent, setOpenComponent] = useState(null);
 	// Function to toggle components
 	const handleToggle = () => {
 		setOpenComponent((prev) => (prev === component ? ))
 	}
-
+	*/
 	return (
 	<>
 					<nav className="flex items-center justify-between">
