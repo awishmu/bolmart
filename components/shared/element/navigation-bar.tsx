@@ -14,7 +14,7 @@ export function NavigationBar () {
 	const [openComponent, setOpenComponent] = useState(null);
 	// Function to toggle components
 	const handleToggle = () => {
-		setOpenComponent((prev) => (prev === compnent ? ))
+		setOpenComponent((prev) => (prev === component ? ))
 	}
 
 	return (
