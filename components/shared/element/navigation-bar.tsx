@@ -8,7 +8,14 @@ import { Phone, Heart, Scale, ShoppingCart, Search, ChevronDown, Menu } from 'lu
 
 export function NavigationBar () { 
   
-	const categories = ['Fruits', 'Vegetable', 'Minuman', 'Seafood', 'Recipe', 'Bakery & Snack', 'Promo', 'About us'];
+	const categories = ['Fruits', 'Vegetable', 'Vegan Meat', 'Seafood', 'Recipe', 'Bakery', 'Promo', 'About us'];
+	
+	// State to track which component is open
+	const [openComponent, setOpenComponent] = useState(null);
+	// Function to toggle components
+	const handleToggle = () => {
+		setOpenComponent((prev) => (prev === compnent ? ))
+	}
 
 	return (
 	<>
@@ -21,8 +28,13 @@ export function NavigationBar () {
 									className="text-gray-700 hover:text-green-500 transition font-medium flex items-center gap-1"
 								>
 									{category}
-									{['Vegan Meat', 'Bakery'].includes(category) && <ChevronDown className="w-4 h-4" />}
+									
 								</a>
+									{['Vegan Meat', 'Bakery'].includes(category) && 
+									
+									<ChevronDown className="w-4 h-4" />
+									
+									}
 								</li>
 							))}
 						</ul>

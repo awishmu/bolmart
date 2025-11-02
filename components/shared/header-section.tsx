@@ -8,7 +8,7 @@ import { Phone, Heart, Scale, ShoppingCart, Search, ChevronDown, Menu } from 'lu
 
 import { TopBar } from './element/top-bar';
 import { MainHeader } from './element/main-header';
-import { NavigationBar } from './element/navigation-bar';
+import { HeaderMenu } from './element/header-menu';
 
 export function HeaderSection () {
  	
@@ -25,14 +25,13 @@ export function HeaderSection () {
 			{/* Main Header */}
 			<div className="container mx-auto px-4 py-4">
 				<div className="flex items-center justify-between gap-8">
-				
 					<MainHeader />
 				</div>
  			</div>
 			{/* Navigation */}
 			<div className="bg-beige border-t hidden lg:flex">
 				<div className="container mx-auto px-4">
-					<NavigationBar />
+					<HeaderMenu />
 				</div>
 			</div>
 		</header>
