@@ -1,5 +1,5 @@
 import "@/styles/globals.css"
-import { HeaderSection } from "@/components/shared/header-section";
+import { HeaderSection } from "@/components/sections/header-section";
 
 export default function DemoLayout({
   children,
@@ -9,6 +9,7 @@ export default function DemoLayout({
   return (
     <html lang="en">
       <body>
+	  
 		<HeaderSection />
 			{children}
 	  
