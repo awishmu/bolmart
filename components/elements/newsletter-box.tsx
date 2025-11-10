@@ -8,12 +8,12 @@ export function NewsletterBox () {
 				<div className="m-2 w-full"><h3 className="text-3xl font-medium">Masukkan Kontak Anda</h3></div>
 				<div className="m-2 w-full"><p className="text-lg font-light">Daptkan Panawaran Harga / Paket Termurah Dari Kami</p></div>
 			</div>
-			<div className="nb-middle relative w-full min-h-38 md:w-1/5 flex justify-center items-center mx-auto">
+			<div className="nb-middle relative w-full min-h-38 h-auto md:w-1/5 flex justify-center items-center mx-auto">
 					<Image 
 						src="/Hen_Delivery_preview.png" 
 						alt="Hen deliver envelope" 
 						fill
-						style={{ objectFit: 'cover', borderRadius: '10px', }}
+						style={{ objectFit: 'contain', borderRadius: '10px', }}
 						
 					/>
 			</div>
