@@ -1,148 +1,124 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Form from "next/form";
 import { BreadCrumbContainer } from "@/components/page/breadcrumb-container";
 import { TitlePage } from "@/components/page/title-page";
 
+import { Mail } from "lucide-react";
+import { Phone } from "lucide-react";
+import { MapPinHouse } from "lucide-react";
+import ResponsiveIframe from "@/components/page/responsive-iframe";
+
 export default function ContactUs() {
-  return (
-  <div className="w-full">
-	<div className="w-full flex items-center justify-center py-12 mx-auto font-bold text-5xl text-slate bg-stone-100"> 
-		<div className="mx-auto"><TitlePage /></div>
-	</div>
+	const [name, setName] = useState("");
+	const [message, setMessage] = useState("");
+	const [address, setAddress] = useState("");
 	
-	<BreadCrumbContainer />
-	<div className="flex flex-col justify-center items-center text-center">
-		<h1 className="text-3xl font-bold pb-2">
-		  Kami Menyediakan Aneka Produk Organik / Natural
-		</h1>
-		<h3 className="italic text-md/7">Menjual Aneka Makanan dan Minuman halal, sehat, dan bergizi. Untuk Memenuhi Nutrisi Kesehatan Anda.</h3>
-	</div>
-	<div className="relative w-[100%] min-h-[256px] h-auto lg:h-[512px] flex justify-center items-center my-8 mx-auto py-4 px-6">
-		<Image 
-			src="/istockphoto-makanan-diet-seimbang.jpg" 
-			alt="makanan-natural-seimbang" 
- 			fill
-			style={{ objectFit: 'cover', borderRadius: '10px', }}
-			
-		/>
-		 
-	</div>
-	<div className="relative">
-		<div className="w-full flex flex-col justify-center md:flex-row md:justify-between px-4">
-			<div className="relative h-auto md:w-1/2 mb-6">
-				<div className="mt-4">
-					<h2 className="text-4xl font-bold mb-8">Menyediakan makanan sehat dan alami</h2>
-					<p className="text-sm/7">Kami percaya bahawa makanan terbaik adalah makanan alami, karena itu kami menyediakan ayam kampung asli yang dikembangkan secara alami.
-					Kami memprioritaskan proses berkelanjutan dan kelestarian lingkungan, kesehatan hewan, dan kemurinian ayam kampung asli.
-					</p>
+	function submit(e) {
+		e.preventDefault();
+		
+		console.log('submit');
+	};
+  return (
+	<div className="w-full">
+		<div className="w-full flex items-center justify-center py-12 mx-auto font-bold text-5xl text-slate bg-stone-100"> 
+			<div className="mx-auto"><TitlePage title="Contact Us" /></div>
+		</div>
+		
+		<BreadCrumbContainer />
+		<div className="w-full flex flex-wrap  justify-around mx-auto">
+			<div className="w-xs flex flex-col justify-center px-2 py-4 mx-2 my-4 border-3 shadow-xl rounded-md">
+				<div className="mx-auto">
+					<Mail className="w-18 h-18 text-6xl font-medium text-lime-900" />
 				</div>
-				<div className="mt-4">
-					<p className="text-xl font-medium"><Link href="#">Produk Kami</Link></p>
-					<p className="text-xl font-medium"><Link href="#">Contak Kami</Link></p>
-					<p className="text-xl font-medium"><Link href="#">0812 6805 2229</Link></p>
-				</div>
+				<h3 className="mx-auto text-2xl font-bold">
+					Email Address
+				</h3>
+				<div className="mx-auto text-xl italic">contact@pasarbone.com</div>
 			</div>
-			<div className="relative h-auto md:w-1/2 flex justify-center md:justify-end">
-				<Image 
-					src="/istockphoto-makanan-diet-seimbang.jpg" 
-					alt="makanan-natural-seimbang" 
-					width={500}
-					height={500}
-					style={{ objectFit: 'cover', borderRadius: '10px', right:0, }}
-				/>
+			<div className="w-xs flex flex-col justify-center px-2 py-4 mx-2 my-4 border-3 shadow-xl rounded-md">
+				<div className="mx-auto">
+					<Phone className="w-18 h-18 text-6xl font-medium text-lime-900" />
+				</div>
+				<h3 className="mx-auto text-2xl font-bold">
+					Contact Number
+				</h3>
+				<div className="mx-auto text-xl italic"><p>0812 6805 2229</p></div>
+			</div>
+			<div className="w-xs flex flex-col justify-center px-2 py-4 mx-2 my-4 border-3 shadow-xl rounded-md">
+				<div className="mx-auto">
+					<MapPinHouse className="w-18 h-18 text-6xl font-medium text-lime-900" />
+				</div>
+				<h3 className="mx-auto text-2xl font-bold">
+					Alamat
+				</h3>
+				<div className="mx-auto text-xl italic text-center">Desa Pattiro Bajo, Bone</div>
 			</div>
 		</div>
-		<div className="">
-			<div className="p-4">
-				<div className="text-center mx-0 mt-8 mb-6">
-					<h2 className="text-5xl font-bold">Visi dan Misi</h2>
+		<div className="w-full mt-8 lg:flex justify-between gap-2">
+			<div className="w-full md:w-[50%]">
+				<div className="p-4"><h3 className="text-2xl font-bold">Pertanyaan-pertanyaan</h3></div>
+				<div className="flex flex-col  my-4 gap-2">
+					<div className="text-lg text-lime-900 bg-zinc-100 font-medium py-4 px-2 my-2"><p>Bagaimana Cara Pengembalian Barang</p></div>
+					<div className="px-2 "><p>Barang sudah dikirim dapat dikembalikan dengan pengembalian dipotong ongkos kirim dan 5% dari harga barang. Setelah melalui proses pemeriksaan keutuhan barang.</p></div>
 				</div>
-			</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">				
-				<div className="lg:w-full block">
-					<div className="relative max-w-[350px] h-[350px] mx-auto flex ">
-						<Image 
-							src="/Fluffy_Chicks_Golden_Straw.png" 
-							alt="anak ayam"
-							width={350} height={350}
-							style={{ objectFit: 'cover', borderRadius: '50%',}}
-						/>
-					</div>
-					<div className="p-4 mt-8">
-						Mengembangkan pertanian alami utamanya di sektor peternakan ayam kampung
-					</div>
+				<div className="flex flex-col  my-4 gap-2">
+					<div className="text-lg text-lime-900 bg-zinc-100 font-medium py-4 px-2 my-2"><p>Berapa lama masa aktif pesanan?</p></div>
+					<div className="px-2 "><p>Barang yang sudah di-checkout akan kami tunggu bukti transfernya selama 1x6 jam, jika tidak ada konfirmasi transfer maka pesanan akan dihapus, dan silahkan buat pesanan baru kembali. </p></div>
 				</div>
-				<div className="lg:w-full block">
-					<div className="relative max-w-[350px] h-[350px] mx-auto flex">
-						<Image 
-							src="/Proud_Hen_Farmyard_Morning.png" 
-							alt="anak ayam"
-							width={350} height={350}
-							style={{ objectFit: 'cover', borderRadius: '50%', }}
-						/>
-					</div>
-					<div className="p-4 mt-8 tex-center">
-						Mengintegrasikan pemenuhan kebutuhan konsumen dengan kelestarian lingkungan
-					</div>
-				</div>
-				<div className="lg:w-full block">
-					<div className="relative max-w-[350px] h-[350px] mx-auto flex">
-						<Image 
-							src="/Farm_Fresh_Egg_Collection.png" 
-							alt="anak ayam"
-							width={350} height={350}
-							style={{ objectFit: 'cover', borderRadius: '50%', }}
-						/>
-					</div>
-					<div className="p-4 mt-8 text-center">
-						Menghadirkan produk makanan yang alami, sehat, bergizi dan berkualitas
-					</div>
-				</div>
-				<div className="lg:w-full block">
-					<div className="relative max-w-[350px] h-[350px] mx-auto flex">
-						<Image 
-							src="/Majestic_Rooster_Sunrise_Portrait.png" 
-							alt="anak ayam"
-							width={350} height={350}
-							style={{ objectFit: 'cover', borderRadius: '50%', }}
-						/>
-					</div>
-					<div className="p-4 mt-8 text-center">
-						Mengunakan pakan dan obat-obatan alami dan menghindari penggunaan antibiotik/vaksinasi dan bahan-bahan kimia tambahan
-					</div>
-				</div>
-			</div>
-		</div> 
-		<div className="w-full flex flex-col md:flex-row gap-6 m-4">
-			<div className="w-full md:w-1/2 py-4 my-4">
-				<h2 className="w-full bg-zinc-100 text-blue-800 text-xl font-bold p-4 my-4 rounded-md">Komitmen pada kami</h2>
-				<div className="relative w-full h-auto mx-auto flex text-center justify-center">
-					<Image 
-							src="/Native_Chicken_Rustic_Studio_Shot.png" 
-							alt="anak ayam"
-							width={350} height={350}
-							style={{ objectFit: 'cover', borderRadius: '0%', }}
-						/>
-				</div>
-				<p className="mt-8 p-4">Kami berkomitmen pada penyediaan daging ayam kampung yang sehat dan menyehatkan,
-				kualitas yang terpercaya (halal, sehat, dan bersih), serta pelestarian lingkungan.</p>
 			</div>
 			
-			<div className="w-full md:w-1/2 py-4 my-4">
-				<h2 className="w-full bg-zinc-100 text-blue-800 text-xl font-bold p-4 my-4 rounded-md">Mengapa memilih kami</h2>
-				<div className="relative w-full h-auto mx-auto flex text-center justify-center">
-					<Image 
-							src="/Smoked_Chicken_Masterpiece.png" 
-							alt="anak ayam"
-							width={350} height={350}
-							style={{ objectFit: 'cover', borderRadius: '0%', }}
-						/>
+			<div className="w-full md:w-[50%]">
+				<div className="p-4 "><h3 className="text-2xl font-bold">Kirimkan Kami Pesan!</h3></div>
+				<div>
+					<Form onSubmit={submit}>
+						<div className="relative mb-4 pb-2">
+							<input type="text" id="name" placeholder=" " value={name} onChange={(e) => setName(e.target.value)} 
+								className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-200"
+							/>
+							<label
+								htmlFor="name"
+								className="absolute left-2 -top-4 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 transition-all peer-focus:-top-4 peer-focus:text-gray-600 peer-focus:text-sm"
+							>Nama<span className="required"> *</span></label>
+						</div>
+						<div className="relative mb-4 pb-2">
+							<textarea id="message" rows="4" placeholder=" " value={message} onChange={(e) => setMessage(e.target.value)} 
+								 className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-200"
+							/>
+							<label htmlFor="message" className="placeholder"
+								className="absolute left-2 -top-4 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 transition-all peer-focus:-top-4 peer-focus:text-gray-600 peer-focus:text-sm"
+							>Pesan/Pertanyaan<span className="required"> *</span></label>
+						</div>
+						<div className="relative mb-4 pb-2">
+							<textarea id="address" rows="4" placeholder=" " value={address} onChange={(e) => setAddress(e.target.value)} 
+								 className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-200"
+							/>
+							<label htmlFor="address" 
+								className="absolute left-2 -top-4 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 transition-all peer-focus:-top-4 peer-focus:text-gray-600 peer-focus:text-sm"
+							>Kontak/Alamat</label>						
+						</div>
+						<div className="relative mb-4 ml-2 pb-2">
+							<button type="submit" className="text-white font-bold rounded-md px-4 py-2 bg-lime-800">Send</button>
+						</div>
+					</Form>
 				</div>
-				<p className="mt-8 p-4">Karena Kami menghasilkan daging ayam kampung berkualitas dan sehat, dibesarkan dengan cara pemeliharaan alami, 
-				tanpa menggunakan hormon pertumbuhan, tanpa vaksin(antibiotik), serta tanp obat-obatan tambahan yang tidak diperlukan.</p>
 			</div>
 		</div>
-	</div>
+		
+		<div className="w-full mt-8">
+			<div className="w-full">
+				 <div style={{ maxWidth: "1024px", margin: "0 auto" }}>
+				  <h1>*) Desa Pattiro Bajo sebelum perbatasan dengan Desa Pakkasalo Kecamatan Sibulue</h1>
+				  <ResponsiveIframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6687.798316734606!2d120.3739514799087!3d-4.667188210898907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbdc29e66f47ced%3A0xaead4b7c63eeabc!2sPattiro%20Bajo%2C%20Kec.%20Sibulue%2C%20Kabupaten%20Bone%2C%20Sulawesi%20Selatan!5e0!3m2!1sid!2sid!4v1762937584131!5m2!1sid!2sid"
+					title="Google Map"
+				  />
+				</div>
+				
+			</div>
+		</div>
     </div>
   )
 }	

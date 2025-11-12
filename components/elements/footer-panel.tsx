@@ -39,7 +39,6 @@ export function FooterPanel () {
 				</div>
 				<div>
 					<div className="w-full mt-2 mr-4">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d994.1462928239494!2d120.37829459312196!3d-4.66780582564398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1762783095930!5m2!1sid!2sid"  style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 					</div>					
 				</div>
 			</div>
