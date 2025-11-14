@@ -14,9 +14,10 @@ export default function ContactUs() {
 	
 	
 	const waContact = async (formData) => {
-		'use server';
+		// 'user server';
+		e.preventDefault();
 		
-		console.log('waContact', formData);
+		console.log('waContact');
 		// if needed,
 		// const inputValue = formData.get("inputValue"); //name
 		// console.log('inputValue', inputValue);
@@ -76,7 +77,7 @@ export default function ContactUs() {
 				<div>
 					<Form action={waContact}>
 						<div className="relative mb-4 pb-2">
-							<input type="text" id="name" placeholder=" " name="name"
+							<input type="text" id="name" placeholder=" " value={name} onChange={(e) => setName(e.target.value)} 
 								className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-200"
 							/>
 							<label
@@ -85,7 +86,7 @@ export default function ContactUs() {
 							>Nama<span className="required"> *</span></label>
 						</div>
 						<div className="relative mb-4 pb-2">
-							<textarea id="message" rows="4" placeholder=" "  name="message"
+							<textarea id="message" rows="4" placeholder=" " value={message} onChange={(e) => setMessage(e.target.value)} 
 								 className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-200"
 							/>
 							<label htmlFor="message" className="placeholder"
@@ -93,7 +94,7 @@ export default function ContactUs() {
 							>Pesan/Pertanyaan<span className="required"> *</span></label>
 						</div>
 						<div className="relative mb-4 pb-2">
-							<textarea id="address" rows="4" placeholder=" " name="address"
+							<textarea id="address" rows="4" placeholder=" " value={address} onChange={(e) => setAddress(e.target.value)} 
 								 className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-200"
 							/>
 							<label htmlFor="address" 
@@ -105,12 +106,12 @@ export default function ContactUs() {
 						</div>
 					</Form>
 				</div>
-			</div>x
+			</div>
 		</div>
 		
 		<div className="w-full mt-8">
 			<div className="w-full">
-				 <div className="mx-auto my-2 w-full h-[100%]">
+				 <div style={{ maxWidth: "1024px", margin: "0 auto" }}>
 				  <h1>*) Desa Pattiro Bajo sebelum perbatasan dengan Desa Pakkasalo Kecamatan Sibulue</h1>
 				  <ResponsiveIframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6687.798316734606!2d120.3739514799087!3d-4.667188210898907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbdc29e66f47ced%3A0xaead4b7c63eeabc!2sPattiro%20Bajo%2C%20Kec.%20Sibulue%2C%20Kabupaten%20Bone%2C%20Sulawesi%20Selatan!5e0!3m2!1sid!2sid!4v1762937584131!5m2!1sid!2sid"
