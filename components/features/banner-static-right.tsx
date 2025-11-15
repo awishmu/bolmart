@@ -20,11 +20,11 @@ export function BannerStaticRight () {
 				<div className="absolute top-[20%] left-[10%] flex flex-col gap-3">
 					<div><h1 className="text-4xl font-bold">Jahe Bubuk</h1></div>
 					<div><h3 className="text-xl">Asli jahe merah 100%</h3></div>
-					<div className="px-4 py-2 text-white bg-black rounded-lg font-bold w-[8rem] text-center"><Link href="#"><button>Show Now</button></Link></div>
+					<div className="px-4 py-2 text-white bg-teal-500 rounded-lg font-bold w-[8rem] text-center"><Link href="#"><button>Show Now</button></Link></div>
 				</div>				
 			</div>
 			
-			<div className="relative bg-linear-to-r/oklch from-rose-600 to-rose-300 w-full h-[12rem] border-2">
+			<div className="relative bg-linear-to-r/oklch from-rose-600 to-rose-300 w-full h-[12rem]">
 				<div className="relative w-full h-full">
 					<div className="absolute flex justify-end right-0 w-full h-[228px] p-2">
 						<Image 
@@ -35,9 +35,9 @@ export function BannerStaticRight () {
 					</div>
 				</div>
 				<div className="absolute top-[20%] left-[10%] flex flex-col gap-3">
-					<div><h1 className="text-4xl font-bold">Telur Ayam Kampung</h1></div>
+					<div><h1 className="text-xl font-bold">Telur Ayam Kampung</h1></div>
 					<div><h3 className="text-xl">Segar dan Fertilize</h3></div>
-					<div className="px-4 py-2 text-white bg-black rounded-lg font-bold w-[8rem] text-center"><Link href="#"><button>Show Now</button></Link></div>
+					<div className="px-4 py-2 text-white bg-sky-700 rounded-lg font-bold w-[8rem] text-center"><Link href="#"><button>Show Now</button></Link></div>
 				</div>				
 			</div>
 		</div>
