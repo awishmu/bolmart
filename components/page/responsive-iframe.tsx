@@ -8,7 +8,7 @@ export default function ResponsiveIframe({ src, title }) {
   }
 
   return (
-    <div style={{styles.wrapper}}>
+    <div className="wrapper">
       <iframe
         src={src}
         title={title || "Embedded content"}
@@ -22,8 +22,8 @@ export default function ResponsiveIframe({ src, title }) {
   );
 }
 
-const styles = {
-  wrapper: {
+<style jsx>{
+  .wrapper: {
     position: "relative",
     paddingBottom: "56.25%", // 16:9 aspect ratio
     height: 0,
@@ -39,4 +39,4 @@ const styles = {
     height: "100%",
     border: "0",
   },
-};
+}</style>
