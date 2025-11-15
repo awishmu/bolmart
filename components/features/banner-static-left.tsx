@@ -6,20 +6,21 @@ import Image from "next/image"
 export function BannerStaticLeft () { 
 // width 70%
 	return (
-		<div className="w-full lg:w-[70%]">
-			<div className="w-full bg-yellow-300 w-full h-64 border-2">
-				<div className="relative w-full h-full flex justify-end items-center mr-0 my-4 py-2">
-					<div className="absolute top-0 right-0 bg-yellow-100 text-right">
+		<div className="w-full md:h-[24rem] md:w-[70%]">
+			<div className="relative w-full h-[24rem] border-2 border-green-900 bg-linear-to-r/oklch from-blue-600 to-blue-300 ">
+				<div className="relative w-full h-full mr-0">
+					<div className="absolute flex items-center justify-end right-0 w-full h-[19rem] p-2">
 						<Image 
-							src="/Native_Chicken_Rustic_Studio_Shot.png" alt="" 
+							src="/banners/raw-chicken-meat.png" alt="" 
 							fill 
-							style={{ objectFit: 'contain', borderRadius: '10px', right: '1px', left: 'auto'}}
+							style={{ objectFit: 'contain', borderRadius: '10px', objectPosition: 'right'}}
 						/>
 					</div>
 				</div>
-				<div className="text-white font-bold">
-					<div><h1>Best Chicken Meat</h1></div>
-					<div><h3>This Weekend Only</h3></div>
+				<div className="absolute top-[20%] left-[10%] flex flex-col gap-3">
+					<div><h1 className="text-4xl font-bold">Ayam Kampung Asli</h1></div>
+					<div><h3 className="text-xl">Segar, Alami, Tanpa Antibiotik</h3></div>
+					<div className="px-4 py-2 text-white bg-black rounded-lg font-bold w-[8rem] text-center"><Link href="#"><button>Show Now</button></Link></div>
 				</div>				
 			</div>
 		</div>
