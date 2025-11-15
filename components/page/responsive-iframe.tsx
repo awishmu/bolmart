@@ -19,8 +19,8 @@ export default function ResponsiveIframe({ src, title }) {
         referrerPolicy="no-referrer"
       />
     </div>
-  );
-}
+
+    
 
 <style jsx>{
   .wrapper {
@@ -30,7 +30,7 @@ export default function ResponsiveIframe({ src, title }) {
     overflow: "hidden",
     width: "100%",
     background: "#000",
-  },
+  }
   iframe {
     position: "absolute",
     top: 0,
@@ -40,3 +40,6 @@ export default function ResponsiveIframe({ src, title }) {
     border: "0",
   },
 }</style>
+  
+  );
+}
