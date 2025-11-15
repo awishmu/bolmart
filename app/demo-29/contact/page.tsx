@@ -13,7 +13,7 @@ import ResponsiveIframe from "@/components/page/responsive-iframe";
 export default function ContactUs() {
 	
 	
-	const waContact = async (formData) => {
+	const waContact = async (formData: FormData) => {
 		'use server';
 		
 		console.log('waContact', formData);
