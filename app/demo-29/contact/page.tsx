@@ -13,10 +13,10 @@ import ResponsiveIframe from "@/components/page/responsive-iframe";
 export default function ContactUs() {
 	
 	
-	const waContact = async (formData: FormData) => {
+	async function waContact (formData: FormData) => {
 		'use server';
-		
-		console.log('waContact', formData);
+		const name = formData.name;
+		console.log('Name waContact', name);
 		// if needed,
 		// const inputValue = formData.get("inputValue"); //name
 		// console.log('inputValue', inputValue);
