@@ -12,7 +12,7 @@ export default function ResponsiveIframe({ src, title }) {
       <iframe
         src={src}
         title={title || "Embedded content"}
-        style={styles.iframemap}
+        className={styles.iframemap}
         frameBorder="0"
         allowFullScreen
         loading="lazy" // Improves performance
