@@ -6,7 +6,7 @@
     width: "100%";
     background: "#000";
   }
-  iframe {
+  .iframemap {
     position: "absolute";
     top: 0;
     left: 0;
