@@ -17,6 +17,7 @@ export default function ResponsiveIframe({ src, title }) {
         allowFullScreen
         loading="lazy" // Improves performance
         referrerPolicy="no-referrer"
+        className={styles.iframemap}
       />
     </div>
   );
