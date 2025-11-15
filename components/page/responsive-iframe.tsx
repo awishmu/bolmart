@@ -8,7 +8,7 @@ export default function ResponsiveIframe({ src, title }) {
   }
 
   return (
-    <div style={styles.wrapper}>
+    <div style={{styles.wrapper}}>
       <iframe
         src={src}
         title={title || "Embedded content"}
