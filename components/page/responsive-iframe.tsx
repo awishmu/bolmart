@@ -23,7 +23,7 @@ export default function ResponsiveIframe({ src, title }) {
 }
 
 <style jsx>{
-  .wrapper: {
+  .wrapper {
     position: "relative",
     paddingBottom: "56.25%", // 16:9 aspect ratio
     height: 0,
@@ -31,7 +31,7 @@ export default function ResponsiveIframe({ src, title }) {
     width: "100%",
     background: "#000",
   },
-  iframe: {
+  iframe {
     position: "absolute",
     top: 0,
     left: 0,
