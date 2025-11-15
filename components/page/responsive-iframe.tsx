@@ -1,6 +1,6 @@
 // components/ResponsiveIframe.js
 import React from "react";
-
+// import styles from "@/styles/map-frame.module.css"
 export default function ResponsiveIframe({ src, title }) {
   if (!src || typeof src !== "string") {
     console.error("Invalid iframe src provided");
@@ -8,35 +8,17 @@ export default function ResponsiveIframe({ src, title }) {
   }
 
   return (
-    <div style={styles.wrapper}>
+    <div className="w-full relative h-[40rem] mx-auto">
       <iframe
         src={src}
         title={title || "Embedded content"}
-        style={styles.iframe}
+        className="w-full max-w-[64rem] h-[40rem] absolute mx-auto top-0 "
         frameBorder="0"
         allowFullScreen
         loading="lazy" // Improves performance
         referrerPolicy="no-referrer"
+        
       />
     </div>
   );
 }
-
-const styles = {
-  wrapper: {
-    position: "relative",
-    paddingBottom: "56.25%", // 16:9 aspect ratio
-    height: 0,
-    overflow: "hidden",
-    width: "100%",
-    background: "#000",
-  },
-  iframe: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    border: "0",
-  },
-};
