@@ -1,10 +1,14 @@
 'use client'
 import React, { useState } from 'react';
 import Form from 'next/form';
-
+import { waContact } from "@/app/actions"
 export function ContactWaForm() {
+	
 
 	const [formData, setFormData] = useState({ name:'', message:'', address:'' })
+	const actionWaContact = waContact.bind(null)
+
+/***
   async function waContact(formData: FormData) {
     'use server';
     
@@ -15,9 +19,10 @@ export function ContactWaForm() {
     })
 	console.log('name : ', name)
   }
+*/
 return (
         <div>
-					<Form action={waContact}>
+					<Form action={actionWaContact}>
 						<div className="relative mb-4 pb-2">
 							<input type="text" id="name" placeholder=" " name="name"
 								value={formData.name}

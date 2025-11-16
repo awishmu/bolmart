@@ -65,7 +65,7 @@ export default function ContactUs() {
 			
 			<div className="w-full md:w-[50%]">
 				<div className="p-4 "><h3 className="text-2xl font-bold">Kirimkan Kami Pesan!</h3></div>
-				
+				<ContactWaForm />
 			  </div>
 		</div>
 		
