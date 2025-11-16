@@ -9,6 +9,7 @@ import { Mail } from "lucide-react";
 import { Phone } from "lucide-react";
 import { MapPinHouse } from "lucide-react";
 import ResponsiveIframe from "@/components/page/responsive-iframe";
+import { ContactWaForm } from "@/components/features/contact-wa-form.tsx";
 
 export default function ContactUs() {
 	
