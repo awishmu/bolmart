@@ -13,15 +13,6 @@ import ResponsiveIframe from "@/components/page/responsive-iframe";
 export default function ContactUs() {
 	
 	
-	async function waContact (formData: FormData) {
-		'use server';
-		const name = formData.get('name');
-		console.log('Name waContact', name);
-		// if needed,
-		// const inputValue = formData.get("inputValue"); //name
-		// console.log('inputValue', inputValue);
-		// save in database,
-	};
   return (
 	<div className="w-full">
 		<div className="w-full flex items-center justify-center py-12 mx-auto font-bold text-5xl text-slate bg-stone-100"> 
