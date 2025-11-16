@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Form from 'next/form';
 
-erxport function ContactWaForm() {
+export function ContactWaForm() {
   async function waContact(formData: FormData) {
     'use server';
     
