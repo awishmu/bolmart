@@ -10,12 +10,16 @@ export function ContactWaForm() {
       name: formData.get('name') as string,
       email: formData.('email') as string,      
     })
+	console.log('name : ', name)
   }
 return (
         <div>
 					<Form action={waContact}>
 						<div className="relative mb-4 pb-2">
 							<input type="text" id="name" placeholder=" " name="name"
+								value={formData.name}
+								onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+								required
 								className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-200"
 							/>
 							<label
