@@ -1,8 +1,10 @@
 'use client'
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Form from 'next/form';
 
 export function ContactWaForm() {
+
+	const [formData, setFormData] = useState({ name:'', message:'', address:'' })
   async function waContact(formData: FormData) {
     'use server';
     
