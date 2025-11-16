@@ -10,7 +10,8 @@ export function ContactWaForm() {
     
     setFormData({
       name: formData.get('name') as string,
-      email: formData.get('email') as string,      
+      message: formData.get('message') as string,      
+	  address: formData.get('address') as string,      
     })
 	console.log('name : ', name)
   }
