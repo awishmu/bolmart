@@ -15,7 +15,7 @@ export default function ContactUs() {
 	
 	async function waContact (formData: FormData) {
 		'use server';
-		const name = formData.name;
+		const name = formData.get('name');
 		console.log('Name waContact', name);
 		// if needed,
 		// const inputValue = formData.get("inputValue"); //name
