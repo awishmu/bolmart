@@ -13,7 +13,7 @@ export function DealAvailable () {
 				<div className="flex gap-2">
 					<div className="relative w-[14rem] border-2 m-2 p-2 bg-purple-200">
 						Product Detail 1
-						<div className="relative w-full h-full">
+						<div className="relative w-full bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
 							<div className="absolute flex justify-end right-0 w-full h-[228px] p-2">
 								<Image 
 									src="/banners/raw-chicken-meat.png" alt="" 
