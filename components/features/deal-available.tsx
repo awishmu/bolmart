@@ -13,7 +13,7 @@ export function DealAvailable () {
 					<h3 className="text-amber-400 text-xl uppercase">Hot This Month</h3>
 					<div>
 						<h2 className="text-white text-2xl font-medium">Save For Extra</h2>
-						<h2 className="text-lime-400 text-2xl font-bold">$15 Per Order</h2>
+						<h2 className="text-lime-400 text-2xl font-bold">Rp10 Per Order</h2>
 					</div>
 				</div>
 			</div>
