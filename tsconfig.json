@@ -1,7 +1,7 @@
 
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "https://awishmu.github.io/bolmart",
     "paths": {
       "@/*": ["./*"]
     },
