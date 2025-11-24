@@ -1,7 +1,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import Rcmeat from "banners/raw-chicken-meat.png"
+import Rcmeat from "./banners/raw-chicken-meat.png"
 
 export function BannerStaticRight () { 
 // width 70%
@@ -12,7 +12,7 @@ export function BannerStaticRight () {
 					<div className="absolute flex justify-end right-0 w-full h-[228px] p-2">
 						<Image 
 							src={Rcmeat} alt="" 
-							fill 
+							layout="fill" 
 							style={{ objectFit: 'contain', borderRadius: '10px', objectPosition: 'right'}}
 						/>
 					</div>
