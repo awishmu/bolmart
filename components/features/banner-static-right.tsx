@@ -11,7 +11,7 @@ export function BannerStaticRight () {
 				<div className="relative w-full h-full">
 					<div className="absolute flex justify-end right-0 w-full h-[228px] p-2">
 						<Image 
-							src={`public/banners/raw-chicken-meat.png`} alt="" 
+							src={`/banners/raw-chicken-meat.png`} alt="" 
 							layout="fill" 
 							style={{ objectFit: 'contain', borderRadius: '10px', objectPosition: 'right'}}
 						/>
