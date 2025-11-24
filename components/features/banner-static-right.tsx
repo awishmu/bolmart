@@ -1,7 +1,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import Rcmeat from "/banners/raw-chicken-meat.png"
+import Rcmeat from "banners/raw-chicken-meat.png"
 
 export function BannerStaticRight () { 
 // width 70%
