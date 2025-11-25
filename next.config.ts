@@ -2,6 +2,7 @@
 
 const nextConfig = {
 	/** output: 'export', */
+	basePath: 'https://awishmu.github.io/bolmart',
 }
 
 module.exports = nextConfig
