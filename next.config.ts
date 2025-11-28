@@ -8,8 +8,6 @@ const nextConfig = {
 	      {
 	        protocol: 'https',
 	        hostname: 'awishmu.github.io/bolmart',
-	        port: '',
-	        pathname: '/*',
 	      },
 		]
 	  },
